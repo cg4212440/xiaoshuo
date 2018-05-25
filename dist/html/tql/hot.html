@@ -1,0 +1,11 @@
+<h2>{{ad_name}}</h2>
+<ul class="uls">
+    {{#each data.data}}
+    <li>
+        <a href="/page/detail.html?activeid={{fiction_id}}">
+            <img src="{{cover}}">
+            <span>{{title}}</span>
+        </a>
+    </li>
+    {{/each}}
+</ul>

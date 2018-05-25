@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body,
+html,
+.wrap {
+  width: 100%;
+  height: 100%;
+}
+
+.wrap {
+  overflow: hidden;
+  font-size: 0.3rem;
+  position: relative;
+}
+
+.book {
+  width: 100%;
+  height: 100%;
+  background: #ffa50042;
+  overflow-y: scroll;
+  text-indent: 2em;
+  padding: 0 0.15rem;
+}
+
+.book p {
+  width: 100%;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  border-bottom: 1px solid #736357;
+}
+
+.book span {
+  display: inline-block;
+  text-indent: 2em;
+  margin: 0.5em 0;
+  text-align: justify;
+  letter-spacing: 0;
+  line-height: 24px;
+  overflow: hidden;
+}
+
+.mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.mask header {
+  top: 0;
+  height: 50px;
+  font-size: 14px;
+  line-height: 50px;
+  color: #d5d5d6;
+  position: relative;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.4rem;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.mask .bottom {
+  width: 100%;
+  height: 2rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.mask .reader__ft-bar {
+  overflow: hidden;
+  border-bottom: 1px solid #333;
+}
+
+.mask .reader__ft-bar a {
+  float: left;
+  display: block;
+  width: 25%;
+  font-size: 13px;
+  line-height: 48px;
+  height: 48px;
+  color: #fff;
+  text-align: center;
+}
+
+.mask .reader__ft-bar a:nth-child(2) {
+  width: 50%;
+}
+
+.bottom_bar {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  text-align: center;
+  line-height: 45px;
+}
+
+.bottom_bar span {
+  flex: 1;
+  color: #fff;
+}
+
+.catalogue_div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  background: #fff;
+}
+
+.catalogue_div header {
+  width: 100%;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  padding: 0 0.4rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.catalogue_div main {
+  flex: 1;
+  overflow-y: scroll;
+}

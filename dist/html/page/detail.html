@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/detail.css">
+</head>
+
+<body>
+    <div class="box">
+    </div>
+    <script class="detail" type="text/x-handlebars-template">
+        <div class="one">
+            <a href="javascript:;">
+                <dl>
+                    <dt><img src="{{cover}}"></dt>
+                    <dd>
+                        <p class="p-tit">{{title}}</p>
+                        <p class="p-bot">{{authors}}</p>
+                        <p class="p-bot">{{score_count}}个评价</p>
+                        <p class="p-bot">价格：{{price}}书币</p>
+                        <p class="p-bot">字数：{{started}}</p>
+                    </dd>
+                </dl>
+            </a>
+        </div>
+        <div class="wrap">
+            <ul class="btn-group">
+                <li><a href="../page/read.html"><span class="book-dash-text">开始阅读</span></a></li>
+                <li>
+                    <a class="">下载</a>
+                </li>
+            </ul>
+        </div>
+        <div class="folder-cnt -fold" data-href="">
+            {{content}}
+        </div>
+        <div class="folder-tail">
+            <div data-href="#page=catalog&amp;id=352876&amp;type=fiction&amp;onlyCatalog=1&amp;chapter_id=2356">最新：第2357章 杨奕的老师 更新于 15小时前</div>
+        </div>
+        <div class="u-folder " id="Tag__63">
+            <div class="folder-top">
+                <h3>类别标签</h3>
+            </div>
+            <div class="folder-cnt">
+                <ul class="m-tag -color">
+                    {{#each tags}}
+                    <li class="u-tag" data-href="#page=cate&amp;type=fiction&amp;id=8000000" title="灵异">{{this}}</li>
+
+                </ul>
+                {{/each}}
+            </div><em class="folder-more"></em></div>
+    </script>
+
+    <script src="../js/lib/require.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        require(["detail"]);
+    </script>
+</body>
+
+</html>

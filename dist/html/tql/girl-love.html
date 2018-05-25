@@ -1,0 +1,21 @@
+<!--女生最爱-->
+<h2>{{ad_name}}</h2>
+<ul>
+    {{#each data.data}}
+    <li class="one">
+        <a href="javascript:;">
+            <dl>
+                <dt><img src="{{cover}}"><b>{{allow_free_read}}</b>{{#if finish}}<span>完结</span>{{else}}<span>连载中</span>{{/if}}</dt>
+                <dd>
+                    <p class="p-tit">{{title}}</p>
+                    <p class="p-name">{{authors}}</p>
+                    <p class="p-ell">{{summary}}</p>
+                    <div class="p-bot">{{#each tags}}
+                        <span>{{this}}</span> {{/each}}
+                    </div>
+                </dd>
+            </dl>
+        </a>
+    </li>
+    {{/each}}
+</ul>

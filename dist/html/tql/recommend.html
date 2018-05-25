@@ -1,0 +1,33 @@
+<h2>{{ad_name}}</h2>
+<ul>
+    {{#iflength data.data}} {{#each this}} {{#if @index}}
+    <li class="two">
+        <a href="javascript:;">
+            <b style="font: 13px/13px a;
+    color: rgba(237, 83, 15, 0.9);">0{{@index}}</b>
+            <span>{{title}}</span>
+            <font style="font-size: 10px;color: #ccc;">{{authors}}</font>
+        </a>
+    </li>
+    {{else}}
+    <li class="one">
+        <a href="javascript:;">
+            <dl>
+                <dt><img src="{{cover}}"><b>{{allow_free_read}}</b>{{#if finish}}<span>完结</span>{{else}}<span>连载中</span>{{/if}}</dt>
+                <dd>
+                    <p class="p-tit">{{title}}</p>
+                    <p class="p-name">{{authors}}</p>
+                    <p class="p-ell">{{summary}}</p>
+                    <div class="p-bot book-h5_wrap">{{#each tags}}
+                        <span>{{this}}</span> {{/each}}
+                    </div>
+                </dd>
+            </dl>
+        </a>
+    </li>
+    {{/if}} {{/each}} {{/iflength}}
+</ul>
+<div class="chakan">
+    <b class="b">换一换</b>
+    <b>查看全部</b>
+</div>

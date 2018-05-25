@@ -1,0 +1,1 @@
+define(["jquery","template","geturl"],function(e,i,t){var o=t("activeid");e.getJSON("/book/datail",{activeid:o},function(t){i(e(".detail").html(),t.item,".box"),console.log(t),e(".folder-cnt").on("click",function(){e(this).toggleClass("-fold")})})});

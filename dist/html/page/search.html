@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/search.css">
+</head>
+
+<body>
+    <div class="tab2">
+        <div class="tab2-top">
+            <div class="header-right search-btn" id="Tag__58"></div>
+            <input type="text" class="header-left" placeholder="输入书名/作者/关键字">
+        </div>
+        <div class="searchresult"></div>
+    </div>
+    <script class="searchlist" type="text/x-handlebars-template">
+        {{#each ads}}<a>{{ad_name}}</a>{{/each}}
+    </script>
+    <script class="searchlist-two" type="text/x-handlebars-template">
+        {{#if items.length}} {{#each items}}
+        <div class="one">
+            <a href="javascript:;">
+                <dl>
+                    <dt><img src="{{cover}}">{{#if finish}}<span>完结</span>{{else}}<span>连载中</span>{{/if}}</dt>
+                    <dd>
+                        <h2 class="p-tit">{{title}}</h2>
+                        <p class="p-ell">{{intro}}</p>
+                        <p class="p-bot">{{#each role}}
+                            <span>{{this}}</span> {{/each}}
+                        </p>
+                    </dd>
+                </dl>
+            </a>
+        </div>
+        {{/each}} {{else}}
+        <div>暂无数据</div>
+        {{/if}}
+    </script>
+    <script src="../js/lib/require.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        require(["search"]);
+    </script>
+</body>
+
+</html>
